@@ -1,0 +1,94 @@
+.dashboard-container {
+  padding: 20px 0;
+  .button {
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  .button:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+  .error {
+    text-align: center;
+    color: red;
+  }
+  .navbar {
+    height: 38px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .upload-input {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      cursor: pointer;
+    }
+    #upload-input {
+      display: none;
+    }
+    .upload-button {
+      background-image: url("../img/upload-icon.svg");
+    }
+  }
+  .files-container {
+    display: flex;
+    flex-direction: row;
+    padding: 0 10px;
+    justify-content: center;
+    .file-item {
+      position: relative;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 202px;
+      width: 155px;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      border-radius: 8px;
+      .img {
+        width: 52px;
+        height: 52px;
+        background-color: #4CAF50;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        margin: 0 auto 10px auto;
+      }
+      span {
+        display: block;
+        color: rgba(0, 0, 0, 0.87);
+      }
+      .button {
+        display: none;
+      }
+      .remove-button {
+        background-image: url("../img/trash-icon.svg");
+      }
+      .download-button {
+        background-image: url("../img/download-icon.svg");
+      }
+      .file-item-footer {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: space-around;
+        left: 0;
+        right: 0;
+        padding: 10px;
+      }
+    }
+    .file-item:hover .button {
+      display: inline-block;
+    }
+  }
+}
