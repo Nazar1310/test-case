@@ -6,9 +6,16 @@ use App\Http\Requests\FileUploadRequest;
 use App\Models\File;
 use App\Services\FileService;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class FileActionsController extends Controller
 {
+    public function index() {
+        return Inertia::render('Dashboard', [
+            'files' => File::all()
+        ]);
+    }
+
     public function paginate(Request $request) {
         $paginate = $request->paginate ?? FileService::DEFAULT_PAGINATE;
         $files = File::orderBy('id','DESC')->paginate($paginate);
